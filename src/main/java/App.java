@@ -37,7 +37,7 @@ public class App extends Application {
         sudokuController.update(App.sudoku, null);
 
 
-        WriteToFile.write(sudoku, "sudoku1", "medium");
+        //WriteToFile.write(sudoku, "sudoku1", "medium");
     }
 
     public static void main(String[] args) {
