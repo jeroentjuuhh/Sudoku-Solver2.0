@@ -1,3 +1,5 @@
+package org.openjfx;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;

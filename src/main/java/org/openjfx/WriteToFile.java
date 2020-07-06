@@ -1,3 +1,5 @@
+package org.openjfx;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -33,7 +35,7 @@ public class WriteToFile {
 
         // try-with-resources statement based on post comment below
         try (
-                FileWriter file = new FileWriter("/Users/jeroe/Documents/Sudoku/sudokus.txt")) {
+                FileWriter file = new FileWriter("/Users/jeroe/Documents/Sudoku-Solver2.0/sudokus.txt")) {
             file.write(obj.toJSONString());
             System.out.println("Successfully Copied JSON Object to File...");
             System.out.println("\nJSON Object: " + obj);

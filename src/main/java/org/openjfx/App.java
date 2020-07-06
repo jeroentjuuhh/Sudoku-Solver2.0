@@ -1,3 +1,5 @@
+package org.openjfx;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,13 +17,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        System.out.println("Starting Start");
         mainWindow = primaryStage;
 
-
-        FXMLLoader loaderSudoku = new FXMLLoader(getClass().getResource("sudokuView.fxml"));
+        FXMLLoader loaderSudoku = new FXMLLoader(getClass().getResource("/sudokuView.fxml"));
         sudokuRoot = loaderSudoku.load();
 
-        FXMLLoader loaderImportSudoku = new FXMLLoader((getClass().getResource("sudokuImportView.fxml")));
+        FXMLLoader loaderImportSudoku = new FXMLLoader((getClass().getResource("/sudokuImportView.fxml")));
         sudokuImportRoot = loaderImportSudoku.load();
 
         //adding observers
@@ -31,16 +33,17 @@ public class App extends Application {
         App.sudoku.addObserver(sudokuImport);
 
 
-        mainWindow.setTitle("Sudoku Solver");
-        mainWindow.setScene(new Scene(sudokuRoot, 603, 603));
-        mainWindow.show();
+        mainWindow.setTitle("Sudoku solver");
+        mainWindow.setScene(new Scene(sudokuRoot, 600, 600));
         sudokuController.update(App.sudoku, null);
+        mainWindow.show();
 
 
-        //WriteToFile.write(sudoku, "sudoku1", "medium");
+        //org.openjfx.WriteToFile.write(sudoku, "sudoku1", "medium");
     }
 
     public static void main(String[] args) {
+        System.out.println("Starting Main");
 
         int sudokuArray[] = {   9,0,0,0,3,0,0,0,4,
                 0,3,1,4,0,8,6,7,0,

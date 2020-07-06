@@ -1,3 +1,5 @@
+package org.openjfx;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -66,7 +68,7 @@ public class controllerSudoku implements Observer{
         if(obj instanceof Cell){
             Cell c = (Cell)obj;
 
-            System.out.println("Model.Cell update!");
+            System.out.println("Model.org.openjfx.Cell update!");
         }
 
 
@@ -98,7 +100,6 @@ public class controllerSudoku implements Observer{
 
             value.setPrefWidth(200);
             value.setPrefHeight(200);
-
 
             //only if
             if(shouldBeGrey(c)) {
